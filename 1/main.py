@@ -1,7 +1,7 @@
 import math
 
 # Reading each modules mass as a list
-moduleList = [int(line.rstrip('\n')) for line in open('puzzle_input.txt')]
+moduleList = [int(line.rstrip('\n')) for line in open('../puzzle_input.txt')]
 # Defining a list that will store each modules fuel
 fuelList = []
 
@@ -12,6 +12,7 @@ def get_fuel(mass: int) -> int:
     return round_down(mass / 3) - 2
 
 
+# For each module, compute the fuel needed
 for moduleMass in moduleList:
     fuelList.append(get_fuel(moduleMass))
 
